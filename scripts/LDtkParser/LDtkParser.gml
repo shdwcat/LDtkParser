@@ -229,7 +229,12 @@ function LDtkLoad(level_name) {
 	}
 	
 	if is_undefined(level) {
-		__LDtkTrace("Error! Cannot find the matching level")
+		if level_name == "" {
+			__LDtkTrace($"Error! Cannot find the matching level for '{room_get_name(room)}'")
+		}
+		else {
+			__LDtkTrace($"Error! Cannot find the matching level for room '{level_name}'")
+		}
 		return -1
 	}
 	
