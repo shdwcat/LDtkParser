@@ -1,9 +1,5 @@
 /// @desc Configs
 
-// REMEMBER TO TURN ON "disable file system sandbox" WHEN USING LIVE UPDATING
-// ...and to set this macro to 0 when building the game!
-#macro LDTK_LIVE 1
-
 
 if (LDTK_LIVE) {
     

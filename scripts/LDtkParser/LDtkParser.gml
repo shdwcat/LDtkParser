@@ -1,3 +1,7 @@
+// REMEMBER TO TURN ON "disable file system sandbox" WHEN USING LIVE UPDATING
+// ...and to set this macro to 0 when building the game!
+#macro LDTK_LIVE 1
+
 global.__ldtk_config = {
 	file: "", // the project file
 	level_name: "", // the priority is: argument passed into LDtkLoad > config.level_name > current room level name
@@ -97,6 +101,12 @@ global.ldtk_world_info= {// World and Level info is loaded here
     }
 };//
 
+// @desc track internal parser state
+function LDtkParserState() {
+	static live_file_hash = undefined
+}
+LDtkParserState()
+
 ///feather ignore GM2017
 
 ///@function	LDtkIntGrid(csv_array, w, h)
@@ -176,6 +186,10 @@ function LDtkLoad(level_name) {
 	if (!file_exists(file)) {
 		throw "Warning! LDtk project file is not specified or file does not exist! (" + string(file) + ")"
 		return -1
+	}
+	
+	if LDTK_LIVE {
+		LDtkParserState.live_file_hash = md5_file(file);
 	}
 	
 	#endregion
@@ -787,7 +801,6 @@ function LDtkLoad(level_name) {
 ///@param		{String} [level_name]
 function LDtkLive(level_name) {
 	static __ldtk_live_timer = 0
-	static __ldtk_live_hash = ""
 	
 	var config = global.__ldtk_config
 	
@@ -802,12 +815,12 @@ function LDtkLive(level_name) {
 		//var hash = sha1_file(config.file)
 		var hash = md5_file(config.file)
 		
-		if (hash != __ldtk_live_hash) {
+		if (hash != LDtkParserState.live_file_hash) {
 			__LDtkTrace("Updating...")
 			room_restart()
 			
 			var res = LDtkLoad(level_name)
-			__ldtk_live_hash = hash
+			LDtkParserState.live_file_hash = hash
 			
 			if (res < 0) {
 				__LDtkTrace("Live Update Failed!")
