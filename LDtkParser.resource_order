@@ -12,6 +12,7 @@
     {"name":"oLink","order":3,"path":"objects/oLink/oLink.yy",},
     {"name":"rLDtkTest1","order":1,"path":"rooms/rLDtkTest1/rLDtkTest1.yy",},
     {"name":"LDtk_IntGrid_funcs","order":3,"path":"scripts/LDtk_IntGrid_funcs/LDtk_IntGrid_funcs.yy",},
+    {"name":"LDtkDemoMappings","order":9,"path":"scripts/LDtkDemoMappings/LDtkDemoMappings.yy",},
     {"name":"LDtkParser","order":2,"path":"scripts/LDtkParser/LDtkParser.yy",},
     {"name":"Cavernas_by_Adam_Saltsman","order":3,"path":"sprites/Cavernas_by_Adam_Saltsman/Cavernas_by_Adam_Saltsman.yy",},
     {"name":"sTiles","order":1,"path":"sprites/sTiles/sTiles.yy",},

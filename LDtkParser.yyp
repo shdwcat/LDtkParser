@@ -36,6 +36,7 @@
     {"id":{"name":"oLink","path":"objects/oLink/oLink.yy",},},
     {"id":{"name":"rLDtkTest1","path":"rooms/rLDtkTest1/rLDtkTest1.yy",},},
     {"id":{"name":"LDtk_IntGrid_funcs","path":"scripts/LDtk_IntGrid_funcs/LDtk_IntGrid_funcs.yy",},},
+    {"id":{"name":"LDtkDemoMappings","path":"scripts/LDtkDemoMappings/LDtkDemoMappings.yy",},},
     {"id":{"name":"LDtkParser","path":"scripts/LDtkParser/LDtkParser.yy",},},
     {"id":{"name":"Cavernas_by_Adam_Saltsman","path":"sprites/Cavernas_by_Adam_Saltsman/Cavernas_by_Adam_Saltsman.yy",},},
     {"id":{"name":"sRedSquare","path":"sprites/sRedSquare/sRedSquare.yy",},},

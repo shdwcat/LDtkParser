@@ -30,6 +30,7 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"level_file","filters":[],"listItems":[],"multiselect":false,"name":"level_file","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"LDtkTest.ldtk","varType":2,},
     {"$GMObjectProperty":"v2","%Name":"level_name","filters":[],"listItems":[],"multiselect":false,"name":"level_name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"mappings","filters":[],"listItems":[],"multiselect":false,"name":"mappings","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"new LDtkDemoMappings()","varType":4,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
