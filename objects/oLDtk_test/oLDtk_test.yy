@@ -27,8 +27,8 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"a","filters":[],"listItems":[],"multiselect":false,"name":"a","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"testEnum","filters":[],"listItems":[],"multiselect":false,"name":"testEnum","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"default value","varType":2,},
+    {"$GMObjectProperty":"v2","%Name":"a","filters":[],"listItems":[],"multiselect":false,"name":"a","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":1,},
+    {"$GMObjectProperty":"v2","%Name":"testEnum","filters":[],"listItems":[],"multiselect":false,"name":"testEnum","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"default value","varType":2,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
