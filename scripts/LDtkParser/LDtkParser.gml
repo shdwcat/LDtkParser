@@ -322,9 +322,15 @@ function LDtkLoad(level_name) {
 					#region Match with a GM object
 					
 					var obj_name = config.mappings.entities[$ (entity_name)]
-					obj_name ??= config.object_prefix + entity_name
 					
-					var object_id = asset_get_index(obj_name)
+					if object_exists(obj_name) {
+						var object_id = obj_name
+					}
+					else {
+						obj_name ??= config.object_prefix + entity_name
+					
+						var object_id = asset_get_index(obj_name)
+					}
 					
 					if (object_id == -1) {
 						__LDtkTrace("object/entity", obj_name, "not found in GM, ignoring!")
@@ -518,10 +524,17 @@ function LDtkLoad(level_name) {
 						var tile_size = this_layer.__gridSize;
                         
                         var tileset_name = tileset_def.identifier;
-                        var gm_tileset_name = config.mappings.tilesets[$ (tileset_name)] ;
-                        gm_tileset_name ??= config.tileset_prefix + tileset_name;
-                        var gm_tileset_id = asset_get_index(gm_tileset_name);
-				
+                        var gm_tileset_name = config.mappings.tilesets[$ (tileset_name)];
+						
+						if is_string(gm_tileset_name) {
+	                        gm_tileset_name ??= config.tileset_prefix + tileset_name;
+	                        var gm_tileset_id = asset_get_index(gm_tileset_name);
+						}
+						else {
+							// treat the value as the tileset ref if it's not a string
+							gm_tileset_id = gm_tileset_name;
+						}
+						
 						// create tilemap if it doesn't exist on the layer
 						if (tilemap == -1) {
 					
@@ -620,9 +633,16 @@ function LDtkLoad(level_name) {
 						var tile_size = this_layer.__gridSize;
                         
                         var tileset_name = tileset_def.identifier;
-                        var gm_tileset_name = config.mappings.tilesets[$ (tileset_name)] ;
-                        gm_tileset_name ??= config.tileset_prefix + tileset_name;
-                        var gm_tileset_id = asset_get_index(gm_tileset_name);
+                        var gm_tileset_name = config.mappings.tilesets[$ (tileset_name)];
+						
+						if is_string(gm_tileset_name) {
+	                        gm_tileset_name ??= config.tileset_prefix + tileset_name;
+	                        var gm_tileset_id = asset_get_index(gm_tileset_name);
+						}
+						else {
+							// treat the value as the tileset ref if it's not a string
+							gm_tileset_id = gm_tileset_name;
+						}
 						
 						// create tilemap if it doesn't exist on the layer
 						if (tilemap == -1) {
