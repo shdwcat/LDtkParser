@@ -229,6 +229,11 @@ function LDtkLoad(level_name) {
 		}
 	}
 	
+	// if there's only one level in the file, just load that
+	if level == undefined and array_length(data.levels) == 1 {
+		level = data.levels[0];
+	}
+	
 	if is_undefined(level) {
 		if level_name == "" {
 			__LDtkTrace($"Error! Cannot find the matching level for '{room_get_name(room)}'")
