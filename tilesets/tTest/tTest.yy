@@ -18,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"sTest",
-    "path":"sprites/sTest/sTest.yy",
+    "name":"Cavernas_by_Adam_Saltsman",
+    "path":"sprites/Cavernas_by_Adam_Saltsman/Cavernas_by_Adam_Saltsman.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
