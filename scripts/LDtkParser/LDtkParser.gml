@@ -170,6 +170,7 @@ function LDtkMappings(mappings) {
 ///@param		{String} [level_name]
 function LDtkLoad(level_name) {
 	__LDtkTrace("Starting to load!")
+	var start_time = current_time
 	
 	var config = global.__ldtk_config
 	
@@ -797,7 +798,8 @@ function LDtkLoad(level_name) {
 	
 	#endregion
 	
-	__LDtkTrace("Loaded!")
+	var elapsed = current_time - start_time
+	__LDtkTrace($"Loaded level in {elapsed}ms!")
 	return 0
 }
 
