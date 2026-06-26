@@ -232,6 +232,7 @@ function LDtkLoad(level_name) {
 	room_height = level_h
 	
     // Update level info
+	global.ldtk_world_info.level[$ _level.identifier] ??= {}
     with(global.ldtk_world_info.level[$ _level.identifier]){
         name= _level.identifier;
         
